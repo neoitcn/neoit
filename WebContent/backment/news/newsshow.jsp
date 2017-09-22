@@ -61,7 +61,9 @@ window.location.href="admin/selectAllNews.do?page="+page+"&type="+type;
 								<td width="66px" class="tdColor tdC">序号</td>
 								<td width="240px" class="tdColor">新闻标题</td>
 								<td width="100px" class="tdColor">文章作者</td>
+								
 								<td width="70px" class="tdColor">显示级别</td>
+								
 								<td width="70px" class="tdColor">创建者</td>
 								<td width="150px" class="tdColor">创建时间</td>
 								<!-- <td width="50px" class="tdColor">优先级</td> -->
@@ -78,13 +80,17 @@ window.location.href="admin/selectAllNews.do?page="+page+"&type="+type;
 
 									</td>
 									<td>${news.author }</td>
-									<c:if test="${news.level==1}">
-									<td>一般</td>
+									<c:if test="${news.type==2}">
+										<c:if test="${news.level==1}">
+										<td>一般</td>
+										</c:if>
+										<c:if test="${news.level==2}">
+										<td>置顶</td>
+										</c:if>
 									</c:if>
-									<c:if test="${news.level==2}">
-									<td>置顶</td>
+									<c:if test="${news.type==1}">
+										<td>无</td>
 									</c:if>
-									
 									
 									
 									

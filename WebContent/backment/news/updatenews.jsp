@@ -154,7 +154,7 @@ border:1px gray solid;
              <span style="font-size: 10px; color: gray;"> (注意:若不修改,则使用新闻原标题图片)</span></td>
          </tr>
          <tr>
-	         <td style="text-align: center;font-weight: 600;">新闻概要:</td>
+	         <td style="text-align: center;font-weight: 600;">新闻概要:<p style="font-size: 10px; color: gray;">(30字左右)</p></td>
 	         <td></p><textarea rows="2" cols="50"  name="resume">${news.resume}</textarea></td>
          </tr>
         
