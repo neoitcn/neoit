@@ -56,9 +56,10 @@
                               </ul>
                             </li>
                             <li><a href="pages/sztd.jsp">师资团队</a></li>
-                            <li><a href="pages/xyjy.jsp">学员就业</a></li>
+                            <li><a href="pages/xyjy.jsp">学员生活</a></li>
+                            <li><a  href="/neoit/pages/gxjy.html">高薪就业</a></li>
                             <li><a href="pages/gywm.html">关于我们</a></li>
-                            <!-- <li><a href="pages/gywm.html">高薪就业</a></li> -->
+                         
                           </ul>
                 </div>
             </div>

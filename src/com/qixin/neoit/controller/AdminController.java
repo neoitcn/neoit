@@ -297,8 +297,12 @@ public class AdminController {
 					+ "</ul>" +
 					"</li>"
 					+ "<li><a href=\"../../sztd.jsp\">师资团队</a></li>"
-					+ "<li><a href=\"/neoit/pages/xyjy.jsp\">学员就业</a></li>"
-					+ "<li><a href=\"../../gywm.html\">关于我们</a></li>" + "</ul>" + "</div>" + "</div>" + "</div>"
+					+ "<li><a href=\"/neoit/pages/xyjy.jsp\">学员生活</a></li>"
+					+"<li><a  href=\"/neoit/pages/gxjy.html\">高薪就业</a></li>"
+					+ "<li><a href=\"../../gywm.html\">关于我们</a></li>"
+					
+					+ "</ul>" 
+					+ "</div>" + "</div>" + "</div>"
 					+ "</header>" + "<!-- end header -->" + "<section id=\"inner-headline\">"
 					+ "<div class=\"container\">" + "<div class=\"row\">" + "<div class=\"col-lg-12\">"
 					+ "<ul class=\"breadcrumb\">"
