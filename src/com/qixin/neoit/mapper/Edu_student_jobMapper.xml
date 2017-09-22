@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qixin.neoit.mapper.Edu_student_jobMapper" >
+  <resultMap id="BaseResultMap" type="com.qixin.neoit.entity.Edu_student_job" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="student_name" property="studentName" jdbcType="VARCHAR" />
+    <result column="come_from" property="comeFrom" jdbcType="VARCHAR" />
+    <result column="company" property="company" jdbcType="VARCHAR" />
+    <result column="job" property="job" jdbcType="VARCHAR" />
+    <result column="level" property="level" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="author" property="author" jdbcType="VARCHAR" />
+    <result column="create_id" property="createId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_id" property="updateId" jdbcType="INTEGER" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="deleted" property="deleted" jdbcType="INTEGER" />
+    <result column="enabled" property="enabled" jdbcType="INTEGER" />
+    <result column="images" property="images" jdbcType="VARCHAR" />
+    <result column="student_image" property="studentImage" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="SMALLINT" />
+    <result column="age" property="age" jdbcType="SMALLINT" />
+    <result column="grad_school" property="gradSchool" jdbcType="VARCHAR" />
+    <result column="html_url" property="htmlUrl" jdbcType="VARCHAR" />
+    <result column="resume" property="resume" jdbcType="VARCHAR" />
+    <result column="salary" property="salary" jdbcType="DOUBLE" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, student_name, come_from, company, job, level, title, author, create_id, create_time, 
+    update_id, update_time, deleted, enabled, images, student_image, sex, age, grad_school, 
+    html_url, resume, salary, mobile
+  </sql>
+     <!-- 1.查询学生总页数(后台) -->
+   <select id="selectStuPages" resultType="int" >
+    select 
+    count(*)
+    from edu_student_job
+  </select>
+    <!-- 2.根据页数查询学员 (后台)-->
+  <select id="selectStuBypage" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from edu_student_job
+    order by id desc limit 	#{page},10
+  </select>
+      <!-- 3.根据学员新闻地址查询新闻 -->
+  <select id="selectStuByhtmurl" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from edu_student_job
+    where html_url = #{htmlurl,jdbcType=VARCHAR}
+  </select>
+  <!-- 4.查询相关推荐4条 (前端)-->
+  <select id="findRecomStus" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from edu_student_job
+    where id != #{stuid,jdbcType=INTEGER}
+    order by id desc limit 4
+  </select>
+  <!-- 5.查询就业学生总页数(前端) -->
+  <select id="selectStusWorkPages" resultType="java.lang.Integer" >
+    select   count(*)
+    from edu_student_job
+  </select>
+   <!--6.根据页数查询学员(前端) -->
+  <select id="selectStusWorkBypage" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from edu_student_job
+    order by id desc limit 	#{page},8
+  </select> 
+  <!-- 查询学员置顶新闻3条 -->
+  <select id="selectZDstuNews" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from edu_student_job
+    where level =2 
+    order by id desc limit 3
+  </select>
+ <!--  查询4条普通学生新闻到index -->
+  <select id="selectLev1StusNews" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from edu_student_job
+    where level = 1
+     order by id desc limit 4
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from edu_student_job
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from edu_student_job
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qixin.neoit.entity.Edu_student_job" >
+    insert into edu_student_job (id, student_name, come_from, 
+      company, job, level, 
+      title, author, create_id, 
+      create_time, update_id, update_time, 
+      deleted, enabled, images, 
+      student_image, sex, age, 
+      grad_school, html_url, resume, 
+      salary, mobile)
+    values (#{id,jdbcType=INTEGER}, #{studentName,jdbcType=VARCHAR}, #{comeFrom,jdbcType=VARCHAR}, 
+      #{company,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, 
+      #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{createId,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateId,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{deleted,jdbcType=INTEGER}, #{enabled,jdbcType=INTEGER}, #{images,jdbcType=VARCHAR}, 
+      #{studentImage,jdbcType=VARCHAR}, #{sex,jdbcType=SMALLINT}, #{age,jdbcType=SMALLINT}, 
+      #{gradSchool,jdbcType=VARCHAR}, #{htmlUrl,jdbcType=VARCHAR}, #{resume,jdbcType=VARCHAR}, 
+      #{salary,jdbcType=DOUBLE}, #{mobile,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qixin.neoit.entity.Edu_student_job" >
+    insert into edu_student_job
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="studentName != null" >
+        student_name,
+      </if>
+      <if test="comeFrom != null" >
+        come_from,
+      </if>
+      <if test="company != null" >
+        company,
+      </if>
+      <if test="job != null" >
+        job,
+      </if>
+      <if test="level != null" >
+        level,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="author != null" >
+        author,
+      </if>
+      <if test="createId != null" >
+        create_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateId != null" >
+        update_id,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="deleted != null" >
+        deleted,
+      </if>
+      <if test="enabled != null" >
+        enabled,
+      </if>
+      <if test="images != null" >
+        images,
+      </if>
+      <if test="studentImage != null" >
+        student_image,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="gradSchool != null" >
+        grad_school,
+      </if>
+      <if test="htmlUrl != null" >
+        html_url,
+      </if>
+      <if test="resume != null" >
+        resume,
+      </if>
+      <if test="salary != null" >
+        salary,
+      </if>
+      <if test="mobile != null" >
+        mobile,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="studentName != null" >
+        #{studentName,jdbcType=VARCHAR},
+      </if>
+      <if test="comeFrom != null" >
+        #{comeFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="job != null" >
+        #{job,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null" >
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null" >
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null" >
+        #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateId != null" >
+        #{updateId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="enabled != null" >
+        #{enabled,jdbcType=INTEGER},
+      </if>
+      <if test="images != null" >
+        #{images,jdbcType=VARCHAR},
+      </if>
+      <if test="studentImage != null" >
+        #{studentImage,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=SMALLINT},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=SMALLINT},
+      </if>
+      <if test="gradSchool != null" >
+        #{gradSchool,jdbcType=VARCHAR},
+      </if>
+      <if test="htmlUrl != null" >
+        #{htmlUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="resume != null" >
+        #{resume,jdbcType=VARCHAR},
+      </if>
+      <if test="salary != null" >
+        #{salary,jdbcType=DOUBLE},
+      </if>
+      <if test="mobile != null" >
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qixin.neoit.entity.Edu_student_job" >
+    update edu_student_job
+    <set >
+      <if test="studentName != null" >
+        student_name = #{studentName,jdbcType=VARCHAR},
+      </if>
+      <if test="comeFrom != null" >
+        come_from = #{comeFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        company = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="job != null" >
+        job = #{job,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null" >
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null" >
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null" >
+        create_id = #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateId != null" >
+        update_id = #{updateId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null" >
+        deleted = #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="enabled != null" >
+        enabled = #{enabled,jdbcType=INTEGER},
+      </if>
+      <if test="images != null" >
+        images = #{images,jdbcType=VARCHAR},
+      </if>
+      <if test="studentImage != null" >
+        student_image = #{studentImage,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=SMALLINT},
+      </if>
+      <if test="age != null" >
+        age = #{age,jdbcType=SMALLINT},
+      </if>
+      <if test="gradSchool != null" >
+        grad_school = #{gradSchool,jdbcType=VARCHAR},
+      </if>
+      <if test="htmlUrl != null" >
+        html_url = #{htmlUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="resume != null" >
+        resume = #{resume,jdbcType=VARCHAR},
+      </if>
+      <if test="salary != null" >
+        salary = #{salary,jdbcType=DOUBLE},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qixin.neoit.entity.Edu_student_job" >
+    update edu_student_job
+    set student_name = #{studentName,jdbcType=VARCHAR},
+      come_from = #{comeFrom,jdbcType=VARCHAR},
+      company = #{company,jdbcType=VARCHAR},
+      job = #{job,jdbcType=VARCHAR},
+      level = #{level,jdbcType=INTEGER},
+      title = #{title,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      create_id = #{createId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_id = #{updateId,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=INTEGER},
+      enabled = #{enabled,jdbcType=INTEGER},
+      images = #{images,jdbcType=VARCHAR},
+      student_image = #{studentImage,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=SMALLINT},
+      age = #{age,jdbcType=SMALLINT},
+      grad_school = #{gradSchool,jdbcType=VARCHAR},
+      html_url = #{htmlUrl,jdbcType=VARCHAR},
+      resume = #{resume,jdbcType=VARCHAR},
+      salary = #{salary,jdbcType=DOUBLE},
+      mobile = #{mobile,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
