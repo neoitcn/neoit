@@ -191,8 +191,16 @@ border:1px gray solid;
 	        <td style="text-align: center;font-weight: 600;">学员年龄:</td>
 	        <td>
 	              <select  id ="sel" name="age" >	
-		          	<c:forEach var="i" begin="15"  end="55">
-					 <option  value = "${i}" >${i}</option >
+		          	<c:forEach var="i" begin="16"  end="55">
+					<c:if test="${stunews.age==i }">
+					<option selected="selected" value = "${i}" >${i}</option >
+					</c:if>
+					<c:if test="${stunews.age!=i }">
+					<option  value = "${i}" >${i}</option >
+					</c:if>
+					
+					
+					
 					</c:forEach> 
 				   </select >
 	        </td>
