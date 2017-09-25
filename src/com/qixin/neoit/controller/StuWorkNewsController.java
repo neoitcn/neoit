@@ -65,6 +65,8 @@ public class StuWorkNewsController {
 			List<String> typelist = new ArrayList<String>();
 			typelist.add("JPG");
 			typelist.add("jpg");
+			typelist.add("jpeg");
+			typelist.add("JPEG");
 			typelist.add("GIF");
 			typelist.add("gif");
 			typelist.add("BMP");

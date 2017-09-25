@@ -34,7 +34,7 @@
 		 var re = /^[0-9]+.?[0-9]*$/;
 		 if(!re.test(salary)){
 	         alert("薪水只能为纯数字,请修改!");
-	     　       　return false;
+	       return false;
 	      }
 		    if(newtitle.length>28)//没有上传标题则给出提示;
 		    {
@@ -198,7 +198,7 @@ border:1px gray solid;
         <table id="tab">
          <tr>
 	        <td id="td_left">新闻标题<span style="color:red">*</span>:<p style="font-size: 10px; color: gray;">(28个字符以内)</p></td>
-	        <td id="td_right"><input  id="title" name="title" size="59" style="width: 580px; "   /></td>
+	        <td id="td_right"><input  id="title" name="title" size="59" style="width: 580px;"/></td>
          </tr>
           <tr>
 	        <td id="td_left">新闻概要<span style="color:red">*</span>:<p style="font-size: 10px; color: gray;">(30字以内)</p></td>
