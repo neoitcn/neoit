@@ -143,14 +143,12 @@ border:1px gray solid;
 		<!--此div保存新闻中的图片的名字 -->
         <div id="savepic"></div>
           <!-- 保存stunews的其他信息传到后台 -->
-        <input type="text" value="${stunews.id}" name="id" />
+        <input type="hidden" value="${stunews.id}" name="id" />
         <input type="hidden" value="${stunews.images}" name="images" />
         <input type="hidden" value="${stunews.studentImage}" name="studentImage" />
-       <%--  <input type="text" value="${stunews.createTime}" name="createTime" /> --%>
-      <textarea name="createTime2" style="display: none;" rows="" cols=""> <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${stunews.createTime}" /></textarea>
-      
-       
-        <input type="text" value="${stunews.htmlUrl}" name="htmlUrl" />
+        <%--  <input type="text" value="${stunews.createTime}" name="createTime" /> --%>
+        <textarea name="createTime2" style="display: none;" rows="" cols=""> <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${stunews.createTime}" /></textarea>
+        <input type="hidden" value="${stunews.htmlUrl}" name="htmlUrl" />
         
         
         <table id="tab">
