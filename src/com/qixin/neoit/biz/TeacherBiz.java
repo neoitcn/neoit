@@ -15,10 +15,14 @@ public interface TeacherBiz  {
     int selectQianTeacherPages()throws Exception;
     //4.����ҳ����ѯʦ��(ǰ̨����)
     List<Edu_teachers> selectQianTeacherByPage(Integer page)throws Exception;
-   //5.chaxun zhuding laoshi 3tiao
+   //5.chaxun zhiding laoshi 3tiao(index.jsp)
     List<Edu_teachers>  selectZDteaList()throws Exception;
     //6.chaxun putong news 4tiao on index show
     List<Edu_teachers> selectLev1TeaNews()throws Exception;
+    //7.chaxun zhiding laoshi 8 tiao(on sztd.jsp)
+    List<Edu_teachers>  selectQianTaiZDteaList()throws Exception;
+    
+    
     
     int deleteByPrimaryKey(Integer id);
     int updateByPrimaryKeySelective(Edu_teachers record);

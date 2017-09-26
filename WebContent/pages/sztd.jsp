@@ -97,6 +97,32 @@ function searchForm(page){
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="row" style="margin-top:20px;" >
+				<!-- 输出置顶的讲师 -->
+					<c:forEach var="teacher" items="${QTZDteaList}" varStatus="i">
+						<div class="col-lg-3 col-sm-6" >
+								   <div class="box">
+									   <div class="box-gray aligncenter">
+										   <!--<h4>启芯一</h4>-->
+										   <a href="/neoit/pages/news/teachernews/teahtml/${teacher.htmlUrl }" target="_blank" style="text-decoration: none">
+											   <div class="icon">
+												   <!--<i class="fa fa-tasks fa-3x"></i>-->
+												   <img src="/neoit/pages/news/teachernews/titleimages/${teacher.teacherImage}"  style="width:300px;height:230px" alt="">
+											   </div>
+											   <div style="font-size: 1.5rem;height:120px;line-height:2;overflow: hidden;text-overflow: ellipsis;color:#666666;text-align:center;">
+											   <p style="color:#000000;font-weight:400;">金牌讲师:  ${teacher.name }</p>
+											   <p style="font-size: 15px;">职位:  ${teacher.job}</p>
+											   <p style="font-size: 13px;">授课风格:  ${teacher.teachingStyle}</p>
+											 
+											   </div>
+										   </a>
+									   </div>
+									   <!-- <div class="box-bottom">
+									   <a href="news/2/1502936788778.html" target="_blank">了解更多</a>
+									   </div> -->
+								   </div>
+							   </div>
+					</c:forEach>
+					<!-- 普通讲师 -->
 					<c:forEach var="teacher" items="${teacherList}" varStatus="i">
 						<div class="col-lg-3 col-sm-6" >
 								   <div class="box">

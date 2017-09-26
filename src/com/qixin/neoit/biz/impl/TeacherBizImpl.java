@@ -24,7 +24,6 @@ public class TeacherBizImpl implements TeacherBiz {
 		return 0;
 	
 	}
-
 	@Override    //����ҳ����ѯ��ʦ
 	public List<Edu_teachers> selectTeacherByPage(Integer page) throws Exception {
 		// TODO Auto-generated method stub
@@ -35,7 +34,6 @@ public class TeacherBizImpl implements TeacherBiz {
 	public int selectQianTeacherPages() throws Exception {
 		// TODO Auto-generated method stub
 		int pages=edu_teachersMapper.selectQianTeacherPages();
-		System.out.println("������:"+pages);
 		if(pages!=0){
 			if(pages%8==0){
 				return pages/8;}
@@ -85,6 +83,12 @@ public class TeacherBizImpl implements TeacherBiz {
 		// TODO Auto-generated method stub
 		return edu_teachersMapper.selectLev1TeaNews();
 	}
+	@Override
+	public List<Edu_teachers> selectQianTaiZDteaList() throws Exception {
+		// TODO Auto-generated method stub
+		return edu_teachersMapper.selectQianTaiZDteaList();
+	}
+
 	public Edu_teachersMapper getEdu_teachersMapper() {
 		return edu_teachersMapper;
 	}

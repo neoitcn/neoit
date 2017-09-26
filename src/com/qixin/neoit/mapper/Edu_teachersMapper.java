@@ -14,11 +14,13 @@ public interface Edu_teachersMapper {
     int selectQianTeacherPages()throws Exception;
     //4.根据页数查询师资(前台功能)
     List<Edu_teachers> selectQianTeacherByPage(Integer page)throws Exception;
-  //5.chaxun zhiding laoshi 3tiao
+    //5.chaxun zhiding laoshi 3tiao
     List<Edu_teachers>  selectZDteaList()throws Exception;
-  //6.chaxun putong news 4tiao on index show
+    //6.chaxun putong news 4tiao on index show
     List<Edu_teachers> selectLev1TeaNews()throws Exception;
-   
+    //7.chaxun zhiding laoshi 8 tiao(on sztd.jsp)
+    List<Edu_teachers>  selectQianTaiZDteaList()throws Exception;
+    
     int deleteByPrimaryKey(Integer id);
 
     int insert(Edu_teachers record);

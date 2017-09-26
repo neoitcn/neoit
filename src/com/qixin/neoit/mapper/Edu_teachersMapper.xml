@@ -35,15 +35,28 @@
   </select>
    <!--  3.查询师资总页数 (前台)-->
   <select id="selectQianTeacherPages" resultType="int" >
-   select count(*) from edu_teachers
+   select count(*) from edu_teachers 
   </select>
+  
     <!-- 4.根据页数查询教师 (前台)-->
   <select id="selectQianTeacherByPage" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from edu_teachers
-    order by id desc limit 	#{page},8
+    from edu_teachers 
+    limit 	#{page},8  
   </select>
+  
+   <!--  查出首页sztd.jsp置顶老师最多8条(暂时没用到) -->
+  <select id="selectQianTaiZDteaList" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from edu_teachers
+    where level = 2
+    order by id desc limit 8
+  </select>
+  
+  
+ 
  <!--  查出首页index置顶老师3条 -->
   <select id="selectZDteaList" resultMap="BaseResultMap" >
     select 
@@ -52,6 +65,7 @@
     where level = 2
     order by id desc limit 3
   </select>
+  <!--  查出index普通teanews4条 -->
   <select id="selectLev1TeaNews" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

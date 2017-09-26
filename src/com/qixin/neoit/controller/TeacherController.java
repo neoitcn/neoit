@@ -475,8 +475,7 @@ public class TeacherController {
 	@RequestMapping(value="/selectTeacher")
 	public String selectTeacher(int page,HttpServletRequest request){
 		try {
-			System.out.println("进入selectTeacher....");
-			// 2.1普通新闻的查询
+		// 2.1普通新闻的查询
 			if (page == 0) {
 				page = 1;// 设置默认查询页数为1
 			}
@@ -502,6 +501,10 @@ public class TeacherController {
 			}
 			List<Edu_teachers> teacherList = null;
 			teacherList = teacherBiz.selectQianTeacherByPage((page - 1) * 8);
+			
+			/*//查询置顶教师(最多8条)
+			List<Edu_teachers> QTZDteaList =teacherBiz.selectQianTaiZDteaList();
+			request.setAttribute("QTZDteaList", QTZDteaList);*/
 			
 			// 保存数据传到jsp
 			request.setAttribute("teacherList", teacherList);
