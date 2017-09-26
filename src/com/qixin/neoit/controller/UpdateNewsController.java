@@ -47,11 +47,17 @@ public class UpdateNewsController {
 	
 	// 1.更新新闻(后台功能)
 	@RequestMapping(value = "/updateNews")
-	public String updateNews(Edu_news news, String[] pic, String content,
+	public String updateNews(Edu_news news,String createTime2, String[] pic, String content,
 			@RequestParam(value = "smallpicture") MultipartFile smallpicture, Map<String, Object> map,
 			HttpServletRequest request) {
 		    try {
-				System.out.println("进入updateNews()......");
+				//接收创建时间并set给news;
+				SimpleDateFormat sdf2=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+				Date date=sdf2.parse(createTime2);
+				news.setCreateTime(date);
+				System.out.println("news创建时间啊::"+news.getCreateTime());
+			
+				
 				//还用原来的titleimage缩略图名 (也用做下面新闻地址)
 				System.out.println("news.getTitleImage():"+news.getTitleImage());
 				System.out.println("news.getTitleImage().substring(0,13):"+news.getTitleImage().substring(0,13));
@@ -514,16 +520,20 @@ public class UpdateNewsController {
 
 	// 2.更新学生就业新闻(后台功能)
 	@RequestMapping(value = "/updateStuNews")
-	public String updateStuNews(Edu_student_job stunews, String[] pic, String content,
+	public String updateStuNews(Edu_student_job stunews,String createTime2, String[] pic, String content,
 			@RequestParam(value = "smallpicture") MultipartFile smallpicture, Map<String, Object> map,
 			HttpServletRequest request) {
 		    try {
-				System.out.println("进入updateStuNews()......");
+				
+				//接收创建时间并set给stunews;
+				SimpleDateFormat sdf2=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+				Date date=sdf2.parse(createTime2);
+				stunews.setCreateTime(date);
+				System.out.println("stu创建时间啊::"+stunews.getCreateTime());
+				
 				//还用原来的titleimage缩略图名 (也用做下面新闻地址)
-				System.out.println("stunews.getStudentImage:"+stunews.getStudentImage());
-				System.out.println("stunews.getStudentImage.substring(0,13):"+stunews.getStudentImage().substring(0,13));
 				long lon = Long.parseLong(stunews.getStudentImage().substring(0,13));
-				System.out.println("lon100:" + lon);
+			
 				//图片不为空,则上传新图片
 				if(!smallpicture.isEmpty()){
 					//1.先删除原来的学生新闻标题缩略图
@@ -612,7 +622,7 @@ public class UpdateNewsController {
 						// 加上HTML头和尾 ,生成HTML页面;
 						String htmlcontent;
 						// 2.1添加HTML头部
-						htmlcontent = "<!DOCTYPE html>"
+						htmlcontent="<!DOCTYPE html>"
 						        + "<html lang=\"en\" xmlns=\"http://www.w3.org/1999/html\">"
 								+ "<head>"
 								+ "<meta charset=\"utf-8\">"
@@ -880,12 +890,12 @@ public class UpdateNewsController {
 
 						// 到此HTML新闻尾添加结束---
 
-						// System.out.println("lon2:" + lon);
-						File file = new File(basicpath + "studentnews/stuhtml/" + lon + ".html");
+						System.out.println("NM002:" + lon);
+						File file = new File(basicpath+"studentnews/stuhtml/" + lon + ".html");
 						if (!file.exists()) {
 							file.createNewFile();
 							if (!file.createNewFile()) {
-								System.out.println("news下面创建了新文件...");
+								System.out.println("stunews下面创建了新文件...");
 							}
 						}
 						// 通过字符流写入到指定文件
@@ -895,7 +905,8 @@ public class UpdateNewsController {
 						out.write(sb.toString().getBytes("utf-8"));
 						out.close();
 						map.put("content", htmlcontent);
-
+						
+                
 						// ----------3.补充news的一些数据
 						if (pic!= null) { // 添加新闻内容中的图片
 							String newsimages = "";
@@ -939,10 +950,14 @@ public class UpdateNewsController {
 
 	//3.更新师资(后台功能)
 	@RequestMapping(value = "/UpdateTeaById")
-	public String UpdateTeaById(Edu_teachers teacher, String[] pic, String content,
+	public String UpdateTeaById(Edu_teachers teacher,String createTime2, String[] pic, String content,
 			@RequestParam(value = "smallpicture") MultipartFile smallpicture, Map<String, Object> map,
 			HttpServletRequest request) {
 		    try {
+		    	//接收创建时间并set给news;
+				SimpleDateFormat sdf2=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+				Date date=sdf2.parse(createTime2);
+				teacher.setCreateTime(date);
 				//还用原来的teacherimage缩略图名 (也用做下面新闻地址)
 				long lon = Long.parseLong(teacher.getTeacherImage().substring(0,13));
 				System.out.println("lon100:" + lon);

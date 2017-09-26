@@ -139,7 +139,9 @@ border:1px gray solid;
         <input type="hidden" value="${news.id}" name="id" />
         <input type="hidden" value="${news.images}" name="images" />
         <input type="hidden" value="${news.titleImage}" name="titleImage" />
-        <input type="hidden" value="${news.createTime}" name="createTime" />
+        <%-- <input type="hidden" value="${news.createTime}" name="createTime" /> --%>
+        <textarea name="createTime2" style="display: none;" rows="" cols=""> <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${news.createTime}" /></textarea>
+        
         <input type="hidden" value="${news.htmlUrl}" name="htmlUrl" />
         <input type="hidden" value="${news.type}" name="type" />
         

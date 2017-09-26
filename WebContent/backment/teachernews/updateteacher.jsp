@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -164,7 +165,9 @@ border:1px gray solid;
         <input type="hidden" value="${teacher.id}" name="id" />
         <input type="hidden" value="${teacher.images}" name="images" />
         <input type="hidden" value="${teacher.teacherImage}" name="teacherImage" />
-        <input type="hidden" value="${teacher.createTime}" name="createTime" />
+       <%--  <input type="hidden" value="${teacher.createTime}" name="createTime" /> --%>
+       <textarea name="createTime2" style="display: none;" rows="" cols=""> <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${teacher.createTime}" /></textarea>
+       
         <input type="hidden" value="${teacher.htmlUrl}" name="htmlUrl" />
         
         

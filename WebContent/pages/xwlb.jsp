@@ -317,6 +317,7 @@ window.onload=function(){
 <a href="#" class="scrollup" style="display: block">
 	<i class="fa fa-angle-up active"></i>
 </a>
+<script>(function () {var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/10162270/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);})();</script>
 
 <!-- javascript -->
 <script src="/neoit/pages/js/jquery.js"></script>
