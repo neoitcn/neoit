@@ -69,7 +69,7 @@
 
     <section id="featured">
 	<!--start slider-->
-      <div class="container">
+      <div class="lbt1">
 		<div class="row">
 			<div class="col-lg-12">
 	    	<!--slider-->
@@ -79,14 +79,14 @@
                   <c:forEach var="headnews" items="${headnewslist}" varStatus="i">
                      <c:if test="${i['index']<5}">
 	                    <li class="flex-active-slide" style="width:100%;height: 100%;float: left;margin-right: -100%;position: relative;display: none">
-							<a  href="pages/news/1/${headnews.htmlUrl}" target="_blank"><img  src="pages/news/images/titleimages/${headnews.titleImage}"  class="img-responsive lb1" style="width: 100%;height:350px;" alt=""/></a>
+							<a  href="pages/news/1/${headnews.htmlUrl}" target="_blank"><img  src="pages/news/images/titleimages/${headnews.titleImage}"  class="img-responsive lb1" style="width: 100%;height:400px;" alt=""/></a>
 	                    </li>
                      </c:if>
                    </c:forEach> 
                   </ul>
 				<ul class="flex-direction-nav">
 					<li>
-						<a class="flex-prev" href="#">Previous</a>
+						<a  class="flex-prev" href="#">Previous</a>
 					</li>
 					<li>
 						<a class="flex-next" href="#">Next</a>

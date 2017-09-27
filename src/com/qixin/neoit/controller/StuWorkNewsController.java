@@ -610,8 +610,5 @@ public class StuWorkNewsController {
 		return "pages/xyjy";
 	}
 	
-	
-	
-	
 
 }

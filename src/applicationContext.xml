@@ -35,7 +35,8 @@
 	<bean id="userBiz" class="com.qixin.neoit.biz.impl.UserBizImpl" autowire="byName"></bean>
 	<bean id="teacherBiz" class="com.qixin.neoit.biz.impl.TeacherBizImpl" autowire="byName"></bean>
 	
-	
+	<!-- 该 BeanPostProcessor 将自动对标注 @Autowired 的 Bean 进行注入 --> 
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/> 
 	
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

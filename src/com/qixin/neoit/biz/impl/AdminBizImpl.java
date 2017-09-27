@@ -3,6 +3,8 @@ package com.qixin.neoit.biz.impl;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.qixin.neoit.biz.AdminBiz;
 import com.qixin.neoit.entity.Edu_news;
 import com.qixin.neoit.mapper.Edu_newsMapper;
@@ -10,6 +12,7 @@ import com.qixin.neoit.mapper.Edu_newsMapper;
 
 
 public class AdminBizImpl  implements  AdminBiz{
+	@Autowired
 	Edu_newsMapper edu_newsMapper;
     @Override
 	public int selectNewsPages(Integer newstype) throws Exception {
@@ -63,14 +66,7 @@ public class AdminBizImpl  implements  AdminBiz{
 	}
 	
 
-	public Edu_newsMapper getEdu_newsMapper() {
-		return edu_newsMapper;
-	}
-
-	public void setEdu_newsMapper(Edu_newsMapper edu_newsMapper) {
-		this.edu_newsMapper = edu_newsMapper;
-	}
-
+	
 	
 	
 

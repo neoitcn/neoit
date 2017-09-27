@@ -2,11 +2,15 @@ package com.qixin.neoit.biz.impl;
 
 import java.util.List;
 import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.qixin.neoit.biz.IndexBiz;
 import com.qixin.neoit.entity.Edu_news;
 import com.qixin.neoit.mapper.Edu_newsMapper;
 
 public class IndexBizImpl implements IndexBiz {
+	@Autowired
 	Edu_newsMapper edu_newsMapper;
     //1.根据类型和等级查询新闻
 	@Override
@@ -69,13 +73,7 @@ public class IndexBizImpl implements IndexBiz {
 		// TODO Auto-generated method stub
 		return edu_newsMapper.selectZDNews();
 	}
-	//设置 get set 方法
-	public Edu_newsMapper getEdu_newsMapper() {
-		return edu_newsMapper;
-	}
-	public void setEdu_newsMapper(Edu_newsMapper edu_newsMapper) {
-		this.edu_newsMapper = edu_newsMapper;
-	}
+	
 	
 
 }

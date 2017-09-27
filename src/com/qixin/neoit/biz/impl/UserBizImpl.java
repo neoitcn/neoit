@@ -3,11 +3,14 @@ package com.qixin.neoit.biz.impl;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.qixin.neoit.biz.UserBiz;
 import com.qixin.neoit.entity.Sys_user;
 import com.qixin.neoit.mapper.Sys_userMapper;
 
 public class UserBizImpl implements UserBiz {
+	@Autowired
 	Sys_userMapper sys_userMapper;
 	@Override
 	public int deleteByPrimaryKey(Integer id) {
@@ -66,13 +69,6 @@ public class UserBizImpl implements UserBiz {
 		return sys_userMapper.selectUserBypage(page);
 	}
 	
-	public Sys_userMapper getSys_userMapper() {
-		return sys_userMapper;
-	}
-
-	public void setSys_userMapper(Sys_userMapper sys_userMapper) {
-		this.sys_userMapper = sys_userMapper;
-	}
-
+	
 
 }

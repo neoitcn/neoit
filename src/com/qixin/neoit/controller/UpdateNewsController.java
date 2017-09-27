@@ -43,8 +43,6 @@ public class UpdateNewsController {
 	String basicpath = "E:/github/neoit/WebContent/pages/news/";
 	// String basicpath="/usr/local/tomcat/webapps/neoit/pages/news/";
 	
-	
-	
 	// 1.更新新闻(后台功能)
 	@RequestMapping(value = "/updateNews")
 	public String updateNews(Edu_news news,String createTime2, String[] pic, String content,

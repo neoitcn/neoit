@@ -72,7 +72,7 @@ public class IndexController {
 			List<Edu_teachers> teaList = null;
 			teaList = teacherBiz.selectLev1TeaNews();
 					
-				// 保存数据传到jsp
+		    // 保存数据传到jsp
 			request.setAttribute("teaList", teaList);
 			//1.4.1查询置顶教师3条
 			List<Edu_teachers> selectZDteaList =teacherBiz.selectZDteaList();
@@ -158,8 +158,5 @@ public class IndexController {
 		return map;
 	}
 
-
-	
-	
 	
 }

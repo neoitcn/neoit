@@ -2,12 +2,15 @@ package com.qixin.neoit.biz.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.qixin.neoit.biz.StudentBiz;
 import com.qixin.neoit.entity.Edu_student_job;
 import com.qixin.neoit.mapper.Edu_student_jobMapper;
 
 
 public class StudentBizImpl implements StudentBiz {
+	@Autowired
 	Edu_student_jobMapper edu_student_jobMapper;
 	@Override
 	public int selectStuPages() throws Exception {
@@ -93,14 +96,6 @@ public class StudentBizImpl implements StudentBiz {
 		return edu_student_jobMapper.selectLev1StusNews();
 	}
 	
-	public Edu_student_jobMapper getEdu_student_jobMapper() {
-		return edu_student_jobMapper;
-	}
-
-	public void setEdu_student_jobMapper(Edu_student_jobMapper edu_student_jobMapper) {
-		this.edu_student_jobMapper = edu_student_jobMapper;
-	}
-
 	
 
 }

@@ -22,27 +22,25 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 @SessionAttributes("")
 public class AuthenticodeController {
 
-	
-	
 	@RequestMapping(value = "scyzm")
 	public void scyzm(HttpServletRequest request,HttpServletResponse response){
 		// TODO Auto-generated method stub
 		     HttpSession session = request.getSession();
 				response.setContentType("image/jpeg");
-		        //ÉèÖÃÒ³Ãæ²»»º´æ
+		        //ï¿½ï¿½ï¿½ï¿½Ò³ï¿½æ²»ï¿½ï¿½ï¿½ï¿½
 		        response.setHeader("Pragma", "No-cache");
 		        response.setHeader("Cache-Control", "no-cache");
 		        response.setDateHeader("Expires", 0);
-		        // ÔÚÄÚ´æÖÐ´´½¨Í¼Ïñ£¬¿í¶ÈÎªwidth£¬¸ß¶ÈÎªheight
+		        // ï¿½ï¿½ï¿½Ú´ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Í¼ï¿½ñ£¬¿ï¿½ï¿½Îªwidthï¿½ï¿½ï¿½ß¶ï¿½Îªheight
 		        int width = 60, height = 20;
 		        BufferedImage pic = new BufferedImage(width, height,
 		                                              BufferedImage.TYPE_INT_RGB);
-		        // »ñÈ¡Í¼ÐÎÉÏÏÂÎÄ»·¾³
+		        // ï¿½ï¿½È¡Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½
 		        Graphics gc = pic.getGraphics();
-		        // Éè¶¨±³¾°É«²¢½øÐÐÌî³ä
+		        // ï¿½è¶¨ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		        gc.setColor(getRandColor(200, 250));
 		        gc.fillRect(0, 0, width, height); 
-		        //ÉèÖÃ¸ÉÈÅÏß
+		        //ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½
 		        Random r = new Random();
 		        for (int i = 0; i < 200; i++) {
 		            int x1 = r.nextInt(width);
@@ -52,26 +50,26 @@ public class AuthenticodeController {
 		            gc.setColor(getRandColor(160, 200));
 		            gc.drawLine(x1, y1, x1 + x2, y1 + y2);
 		        }
-		        //ÉèÖÃ¸ÉÈÅµã
+		        //ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½Åµï¿½
 		    	for (int i = 0; i < 100; i++) {
 		            int x = r.nextInt(width);
 		            int y = r.nextInt(height);
 		            gc.setColor(getRandColor(120, 240));
 		            gc.drawOval(x, y, 0, 0);
 		    	}
-		        //Éè¶¨Í¼ÐÎÉÏÏÂÎÄ»·¾³×ÖÌå
+		        //ï¿½è¶¨Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		        gc.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-		    	// Ëæ»ú²úÉú4Î»Êý×ÖµÄÑéÖ¤Âë
+		    	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½4Î»ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ö¤ï¿½ï¿½
 		        String RS = r.nextInt(9000) + 1000 + "";
-		   //½«ÈÏÖ¤ÂëÓÃdrawStringº¯ÊýÏÔÊ¾µ½Í¼ÏñÀï
+		   //ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½drawStringï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½
 		       gc.setColor(new Color(20 + r.nextInt(110), 20 + r.nextInt(110),
 		                              20 + r.nextInt(110)));
 		        gc.drawString(RS, 10, 16);
-		   // ÊÍ·ÅÍ¼ÐÎÉÏÏÂÎÄ»·¾³
+		   // ï¿½Í·ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½
 		        gc.dispose();
-			// ½«ÈÏÖ¤ÂëRS´æÈëSESSIONÖÐ¹²Ïí
+			// ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½RSï¿½ï¿½ï¿½ï¿½SESSIONï¿½Ð¹ï¿½ï¿½ï¿½
 		        session.setAttribute("yzm", RS);
-			// Êä³öÉú³ÉºóµÄÑéÖ¤ÂëÍ¼Ïñµ½Ò³Ãæ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½Í¼ï¿½ï¿½Ò³ï¿½ï¿½
 		        try {
 					ImageIO.write(pic, "JPEG", response.getOutputStream());
 				} catch (IOException e) {

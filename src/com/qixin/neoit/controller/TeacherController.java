@@ -520,6 +520,4 @@ public class TeacherController {
 		return "pages/sztd";
 	}
 
-
-
 }

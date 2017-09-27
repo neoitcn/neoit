@@ -348,7 +348,7 @@ ul.nav li.dropdown a {
 
 #featured .flexslider {
 	padding:0;
-	margin: 5px 0 5px 0;
+	margin: 0px -67px 0px -67px;
 	background: #fff; 
 	position: relative; 
 	zoom: 1;
@@ -2173,6 +2173,6 @@ article img.pull-right, article .align-right{
 @media(max-width:767px){
 	.lb1{
 		width: 100%;
-		height: 150px !important;
+		height: 170px !important;
 	}
 }

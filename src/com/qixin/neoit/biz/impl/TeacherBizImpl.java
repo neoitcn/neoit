@@ -2,11 +2,14 @@ package com.qixin.neoit.biz.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.qixin.neoit.biz.TeacherBiz;
 import com.qixin.neoit.entity.Edu_teachers;
 import com.qixin.neoit.mapper.Edu_teachersMapper;
 
 public class TeacherBizImpl implements TeacherBiz {
+	@Autowired
 	Edu_teachersMapper edu_teachersMapper;
 	
 	@Override   //��ѯ��ʦ��ҳ��
@@ -89,13 +92,7 @@ public class TeacherBizImpl implements TeacherBiz {
 		return edu_teachersMapper.selectQianTaiZDteaList();
 	}
 
-	public Edu_teachersMapper getEdu_teachersMapper() {
-		return edu_teachersMapper;
-	}
-
-	public void setEdu_teachersMapper(Edu_teachersMapper edu_teachersMapper) {
-		this.edu_teachersMapper = edu_teachersMapper;
-	}
+	
 
 
 }
