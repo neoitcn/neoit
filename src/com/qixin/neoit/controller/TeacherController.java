@@ -132,9 +132,9 @@ public class TeacherController {
 						
 					+"}" 
 				+"if(da>28){"
-					+"document.getElementByID(\"vardate1\").innerHTML=mon+1+\"月8号\";"
-					+"document.getElementByID(\"vardate2\").innerHTML=mon+1+\"月18号\";"
-					+"document.getElementByID(\"vardate3\").innerHTML=mon+1+\"月28号\";"
+					+"document.getElementById(\"vardate1\").innerHTML=mon+1+\"月8号\";"
+					+"document.getElementById(\"vardate2\").innerHTML=mon+1+\"月18号\";"
+					+"document.getElementById(\"vardate3\").innerHTML=mon+1+\"月28号\";"
 					+"} "
 					 //控制编辑器中的图片
 						

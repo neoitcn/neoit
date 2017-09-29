@@ -7,21 +7,15 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
  <script type="text/javascript">
-   window.onload=function(){ 
-	  
-    var spans = document.getElementsByTagName("img");
-      for(var i=0;i<spans.length;i++){
-    	  spans[i].setAttribute("class",'class2');
-       }  
-      alert("213332");
-      uediterpic();
-   }
+  
       function  uediterpic(){ 	
-	    var spans = document.getElementsByTagName("img");
-	      for(var i=0;i<spans.length;i++){
-	    	  spans[i].setAttribute("class",'class3');
-	    	  spans[i].setAttribute("class",'style="width: 100%;height: 100%"');
-	       }  
+    	  
+    	  var a="1";
+    	  var b=parseInt(a)+3;
+    	 
+    	  alert("a"+(a+1));
+    	  alert("b"+b+1);
+    	  document.getElementById("vardate1").innerHTML=b+"月8号";
 
 	   }
  
@@ -51,14 +45,9 @@ height:100px;
 
 
 <body>
+<a href="javascript:uediterpic()">213</a>
+<span id="vardate1" >232323 </span>
 
-<img   src="陈威.jpg"  />3+9468768+9
-<!-- <img  src="陈威.jpg"  />32+95+
-<img   src="丁强.jpg"  />
-32+5+9++8+9
-<img   src="丁强.jpg"  />22
-65+6
-<img   src="陈威.jpg"  />
-色管理如果和i -->
+
 </body>
 </html>

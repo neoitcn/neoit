@@ -18,7 +18,7 @@ public class AdminBizImpl  implements  AdminBiz{
 	public int selectNewsPages(Integer newstype) throws Exception {
 		// TODO Auto-generated method stub
 		Integer aa=edu_newsMapper.selectNewsPages(newstype);
-		System.out.println("总行数:"+aa);
+		
 		if(aa!=null){
 			if(aa%10==0){
 				return aa/10;}

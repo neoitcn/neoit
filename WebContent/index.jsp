@@ -69,7 +69,7 @@
 
     <section id="featured">
 	<!--start slider-->
-      <div class="lbt1">
+      <div class="container22">
 		<div class="row">
 			<div class="col-lg-12">
 	    	<!--slider-->
