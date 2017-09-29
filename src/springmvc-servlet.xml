@@ -31,8 +31,7 @@
 	<bean  class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 	   <property name="defaultErrorView" value="error"></property>  
 	</bean>
-  
-  
+ 
 	
 
 </beans>
