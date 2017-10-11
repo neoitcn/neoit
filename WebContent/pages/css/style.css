@@ -146,7 +146,8 @@ header .navbar-collapse ul.navbar-nav {
 }
 
 header .navbar-default{
-    background-color: #fff;
+    background-color: #fff; 
+    
 }
 
 header .nav li a:hover,

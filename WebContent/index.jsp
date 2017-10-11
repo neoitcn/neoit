@@ -321,7 +321,7 @@
 					<div class="maquee">
 						<ul>
 							<li>
-								<div>杨小杰</div>
+								<div>杨*杰</div>
 								<div>本科</div>
 								<div>应届</div>
 								<div>大数据开发</div>
@@ -331,7 +331,7 @@
 								<div>2017-02-27</div>
 							</li>
 							<li>
-								<div>丁强</div>
+								<div>丁*</div>
 								<div>本科</div>
 								<div>应届</div>
 								<div>大数据开发</div>
@@ -342,7 +342,7 @@
 							</li>
 
 							<li>
-								<div>杨晓亮</div>
+								<div>杨*亮</div>
 								<div>大专</div>
 								<div>应届</div>
 								<div>大数据开发</div>
@@ -352,7 +352,7 @@
 								<div>2017-02-22</div>
 							</li>
 							<li>
-								<div>严文雪</div>
+								<div>严*雪</div>
 								<div>大专</div>
 								<div>应届</div>
 								<div>大数据开发</div>
@@ -362,7 +362,7 @@
 								<div>2017-03-14</div>
 							</li>
 							<li>
-								<div>沈琳啸</div>
+								<div>沈*啸</div>
 								<div>本科</div>
 								<div>应届</div>
 								<div>大数据开发</div>
@@ -372,7 +372,7 @@
 								<div>2017-03-25</div>
 							</li>
 							<li>
-								<div>岳玉涛</div>
+								<div>岳*涛</div>
 								<div>本科</div>
 								<div>应届</div>
 								<div>UI设计师</div>
@@ -382,7 +382,7 @@
 								<div>2017-04-18</div>
 							</li>
 							<li>
-								<div>滕孝前</div>
+								<div>滕*前</div>
 								<div>本科</div>
 								<div>应届</div>
 								<div>大数据开发</div>
@@ -392,7 +392,7 @@
 								<div>2017-04-27</div>
 							</li>
 							<li>
-								<div>石强</div>
+								<div>石*</div>
 								<div>大专</div>
 								<div>应届</div>
 								<div>大数据开发</div>
@@ -402,7 +402,7 @@
 								<div>2017-05-31</div>
 							</li>
 							<li>
-								<div>鲁晓宇</div>
+								<div>鲁*宇</div>
 								<div>大专</div>
 								<div>应届</div>
 								<div>UI设计师</div>
@@ -412,7 +412,7 @@
 								<div>2017-05-31</div>
 							</li>
 							<li>
-								<div>李树霞</div>
+								<div>李*霞</div>
 								<div>高中</div>
 								<div>应届</div>
 								<div>大数据工程师</div>
@@ -422,7 +422,7 @@
 								<div>2017-04-08</div>
 							</li>
 							<li>
-								<div>赵美波</div>
+								<div>赵*波</div>
 								<div>本科</div>
 								<div>应届</div>
 								<div>大数据工程师</div>
@@ -432,7 +432,7 @@
 								<div>2017-04-26</div>
 							</li>
 							<li>
-								<div>吕浩然</div>
+								<div>吕*然</div>
 								<div>大专</div>
 								<div>应届</div>
 								<div>大数据工程师</div>
