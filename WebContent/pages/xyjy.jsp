@@ -76,7 +76,7 @@ function searchForm(page){
 		</div>
 	</header>
 	<!--end header-->
-	<section id="inner-headline">
+   <!-- <section id="inner-headline">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -88,7 +88,7 @@ function searchForm(page){
 			</div>
 		</div>
 	</div>
-	</section>
+	</section> -->
   	<div id="content" >
     	<!--<div align="left">-->
 			<img src="/neoit/pages/img/images/contact1.jpg"  class="img-responsive center-block" style="margin-bottom:20px;width: 100%;height: 100%;">

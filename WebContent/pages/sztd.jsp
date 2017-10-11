@@ -77,20 +77,20 @@ function searchForm(page){
 		</div>
 	</header>
 	<!--end header-->
-	<section id="inner-headline">
+	<!-- <section id="inner-headline">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<ul class="breadcrumb">
 					<li><a href="/neoit/index.jsp"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
-					<!-- <li><a href="/neoit/index.jsp">师资团队</a><i class="icon-angle-right"></i></li> -->
+					<li><a href="/neoit/index.jsp">师资团队</a><i class="icon-angle-right"></i></li>
 					<li class="active">师资团队</li>
 				</ul>
 			</div>
 		</div>
 		
 	</div>
-	</section>
+	</section> -->
 	<section id="content" >
 	<img src="/neoit/pages/img/images/contact3.jpg"  class="img-responsive center-block" style="margin-bottom:20px;width: 100%;height: 100%;">
 	<div class="container">
