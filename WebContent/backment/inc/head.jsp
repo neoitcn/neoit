@@ -37,7 +37,7 @@ function checkout(){
 	<div class="head">
 		<div class="headL">
 			<!-- <img class="headLogo" src="/neoit/backment/img/headlogo.png" /> -->
-		    <p style="font-size:23px;color:white;margin-top:35px;font-weight:800;">欢迎您使用启芯官网后台管理系统</p>
+		    <p style="font-size:23px;color:white;margin-top:35px;font-weight:800;">欢迎使用启芯教育后台管理系统</p>
 		</div>
 		<div class="headR">
 			<p style="font-size:15px;color:white;margin-top:30px;font-weight:400;">

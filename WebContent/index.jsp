@@ -10,6 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <!-- css -->
+<link href="pages/fybcss/index.css" rel="stylesheet" type="text/css">
 <link href="pages/css/bootstrap.min.css" rel="stylesheet" />
 <link href="pages/css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <!--<link href="pages/css/jcarousel.css" rel="stylesheet" />-->
@@ -30,6 +31,7 @@
  <jsp:forward page="index/SelectAllIndexContent.do" ></jsp:forward>
  <%}%>
 <body>
+
 	<div id="wrapper">
       <!-- start header -->
     <header>
@@ -164,11 +166,11 @@
 		   </div>
 
 		<div class="more" style="text-align: center;">
-			<a  href="pages/xwlb.jsp" target="_blank" style="text-decoration: none;">
 					  <span style="cursor: pointer">
 					  <img src="pages/img/jt.png" alt=""/>
 					  </span><br/>
-					  查看更多
+			<a class="more12"  href="pages/xwlb.jsp" target="_blank" style="text-decoration: none;background-color:#2E98CB;color: white;">
+		         查看更多
 			</a>
 		</div>
 
@@ -201,7 +203,11 @@
 											<!--<i class="fa fa-tasks fa-3x"></i>-->
 											<img src="pages/news/studentnews/titleimages/${zdstunews.studentImage}"  style="width: 300px;height: 200px" alt="">
 										</div>
-										<p style="font-size: 1.5rem; color:#666666;height:40px;line-height: 1.5;overflow: hidden;text-overflow: ellipsis">${zdstunews.title}</p>
+										
+									<p style="font-size: 1.5rem; color:#666666;height:25px;line-height: 1;overflow: hidden;text-overflow: ellipsis">${zdstunews.studentName}</p>
+									<p style="font-size: 1.5rem; color:#666666;height:25px;line-height: 1;overflow: hidden;text-overflow: ellipsis">${zdstunews.company}</p>
+									<p style="font-size: 1.5rem; color:#666666;height:15px;line-height: 1;overflow: hidden;text-overflow: ellipsis">薪资:&nbsp;<span style="color:#e4393c;">${zdstunews.salary}元</span></p>
+									
 									</a>
 								</div>
 							</div>
@@ -218,7 +224,9 @@
 											<!--<i class="fa fa-tasks fa-3x"></i>-->
 											<img src="pages/news/studentnews/titleimages/${stunews.studentImage}"  style="width: 300px;height: 200px" alt="">
 										</div>
-										<p style="font-size: 1.5rem; color:#666666;height:40px;line-height: 1.5;overflow: hidden;text-overflow: ellipsis">${stunews.title}</p>
+									<p style="font-size: 1.5rem; color:#666666;height:25px;line-height: 1;overflow: hidden;text-overflow: ellipsis">${stunews.studentName}</p>
+								    <p style="font-size: 1.5rem; color:#666666;height:25px;line-height: 1;overflow: hidden;text-overflow: ellipsis">${stunews.company}</p>
+									<p style="font-size: 1.5rem; color:#666666;height:15px;line-height: 1;overflow: hidden;text-overflow: ellipsis">薪资:&nbsp;<span style="color:#e4393c;">${stunews.salary}元</span></p>
 									</a>
 								</div>
 								
@@ -232,15 +240,191 @@
 			</div>
 
 
-			  <div class="more" style="text-align: center;">
-				  <a  href="pages/xyjy.jsp" target="_blank" style="text-decoration: none;">
-					  <span style="cursor: pointer">
+			  <div class="more" style="text-align: center;" >
+				 	  <span style="cursor: pointer">
 					  <img src="pages/img/jt.png" alt=""/>
 					  </span><br/>
+					   <a class="more12" href="pages/xyjy.jsp" target="_blank" style="text-decoration: none;background-color:#2E98CB;color: white;">
+				
 					  查看更多
 				  </a>
 			  </div>
-			  <section class="callaction">
+		<!-- -------------就业排行榜---------------  -->
+<div class="Top_Record">
+	<div class="record_Top"><p style="font-size: 22px;font-weight:600;">薪资风云榜</p></div>
+    <div class="topRec_List">
+  		
+  		 <table style="margin: 0 auto;width:88%;margin-top:20px;background-color:#25A4FF;color: white;" >
+  		 <tr><th style="width:3%;"></th>
+        	<th style="width:7%;">姓名</th>
+        	<th style="width:3.5%;"></th>
+        	<th style="width: 7%;">学历</th>
+        	<th style="width:3.5%;"></th>
+        	<th style="width: 9%;">目前状态</th>
+        	<th style="width:5%;"></th>
+        	<th style="width: 8%;">专业</th>
+        	<th style="width:2%;"></th>
+            <th style="width: 8%;">入职企业</th>
+            <th style="width:6%;"></th>
+            <th style="width: 8%;">月薪</th>
+            <th style="width:7%;"></th>
+            <th style="width: 8%;">地点</th>
+            <th style="width:6%;"></th>
+            <th style="width: 9%;">就业时间</th>
+            </tr>
+        </table> 
+       
+      <div class="maquee" >
+					<ul>
+						<li>
+							<div>杨小杰</div>
+							<div>本科</div>
+							<div>应届</div>
+							<div>大数据开发</div>
+							<div>阿里**集团</div>
+							<div>18000</div>
+							<div>北京</div>
+							<div>2017-02-27</div> 
+						</li>
+						<li>
+							<div>丁强</div>
+							<div>本科</div>
+							<div>应届</div>
+							<div>大数据开发</div>
+							<div>北京**通网络公司</div>
+							<div>13000</div>
+							<div>北京</div>
+							<div>2017-02-28</div> 
+						</li>
+					
+						<li>
+							<div>杨晓亮</div>
+							<div>大专</div>
+							<div>应届</div>
+							<div>大数据开发</div>
+							<div>北京盛*软件公司</div>
+							<div>11000</div>
+							<div>北京</div>
+							<div>2017-02-22</div>
+						</li>
+						<li>
+							<div>严文雪</div>
+							<div>大专</div>
+							<div>应届</div>
+							<div>大数据开发</div>
+							<div>中安**技术研究院</div> 
+							<div>11000</div>
+							<div>北京</div>
+							<div>2017-03-14</div>
+						</li>
+						<li>
+							<div>沈琳啸</div>
+							<div>本科</div>
+							<div>应届</div>
+							<div>大数据开发</div>
+							<div>紫**集团</div>
+							<div>10000</div>
+							<div>北京</div>
+							<div>2017-03-25</div>
+						</li>
+					 	<li>
+							<div>岳玉涛</div>
+							<div>本科</div>
+							<div>应届</div>
+							<div>UI设计师</div>
+							<div>北京汉龙**公司</div>
+							<div>10000</div>
+							<div>北京</div>
+							<div>2017-04-18</div>
+						</li>
+						<li>
+							<div>滕孝前</div>
+							<div>本科</div>
+							<div>应届</div>
+							<div>大数据开发</div>
+							<div>北京**达有限公司</div>
+							<div>11000</div>
+							<div>北京</div>
+							<div>2017-04-27</div>
+						</li>
+						<li>
+							<div>石强</div>
+							<div>大专</div>
+							<div>应届</div>
+							<div>大数据开发</div>
+							<div>北京盛**股份公司</div>
+							<div>10000</div>
+							<div>北京</div>
+							<div>2017-05-31</div>
+						</li>
+						<li>
+							<div>鲁晓宇</div>
+							<div>大专</div>
+							<div>应届</div>
+							<div>UI设计师</div>
+							<div>北京圣*股份公司</div>
+							<div>10000</div>
+							<div>北京</div>
+							<div>2017-05-31</div>
+						</li>
+						<li>
+							<div>李树霞</div>
+							<div>高中</div>
+							<div>应届</div>
+							<div>大数据工程师</div>
+							<div>北京万**广告公司</div>
+							<div>8200</div>
+							<div>北京</div>
+							<div>2017-04-08</div>
+						</li>  
+						<li>
+							<div>赵美波</div>
+							<div>本科</div>
+							<div>应届</div>
+							<div>大数据工程师</div>
+							<div>北京妙**有限公司</div>
+							<div>9000</div>
+							<div>北京</div>
+							<div>2017-04-26</div>
+						</li> 
+						 <li>
+							<div>吕浩然</div>
+							<div>大专</div>
+							<div>应届</div>
+							<div>大数据工程师</div>
+							<div>北京爱**有限公司</div>
+							<div>15000</div>
+							<div>北京</div>
+							<div>2017-03-27</div>
+						</li> 
+					</ul>
+				</div>
+    </div>
+     <p class="text-center" style="margin:15px 15px;" >
+<a  class="more22" style="text-decoration: none;background-color: #00a0e9;color: white;"  target="_blank" href="/neoit/pages/gxjy.html">查看详情</a></p>  
+ 
+</div> 
+
+<script type="text/javascript"> 
+	  function autoScroll(obj){  
+			$(obj).find("ul").animate({  
+				marginTop : "-39px"  
+			},500,function(){  
+				$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);  
+			})  
+		}  
+		$(function(){  
+			setInterval('autoScroll(".maquee")',2000);
+			
+		}) 
+</script> 
+
+			  
+			  
+			  
+			  
+			  
+		 <section class="callaction">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -316,10 +500,10 @@
 
 
 			  <div class="more" style="text-align: center;">
-				  <a  href="pages/sztd.jsp" target="_blank" style="text-decoration: none;">
-					  <span style="cursor: pointer">
+				  	  <span style="cursor: pointer">
 					  <img src="pages/img/jt.png" alt=""/>
 					  </span><br/>
+				  <a class="more12" href="pages/sztd.jsp" target="_blank" style="text-decoration: none;background-color:#2E98CB;color: white;">
 					查看更多
 				  </a>
 				  
@@ -512,6 +696,6 @@ class="widgetheading">关于我们</h4>
 <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="js/animate.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-
+	
 </body>
 </html>

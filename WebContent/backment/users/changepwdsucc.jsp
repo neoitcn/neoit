@@ -10,7 +10,7 @@
 window.onload=function(){
 	 relogin();
 } 
- var i=4;
+ var i=6;
 function relogin(){
 	i--;
 	document.getElementById("contdown").innerHTML=i+"秒之后将跳转到登陆界面...";
