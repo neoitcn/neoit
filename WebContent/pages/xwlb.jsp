@@ -17,6 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="author" content="http://www.cssmoban.com" />
 <!-- css -->
+<link href="/neoit/pages/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/> 
 <link href="/neoit/pages/css/bootstrap.min.css" rel="stylesheet" />
 <link href="/neoit/pages/css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <!--<link href="/neoit/pages/css/jcarousel.css" rel="stylesheet" />-->
