@@ -56,8 +56,6 @@ public class LoginController {
 		//保存用户信息到session中
 		session.setAttribute("loginUser", checkuser);
 		
-		
-		System.out.println("用户名字是:"+user.getName());
 		return "redirect:/backment/index.jsp";
 	}
 	

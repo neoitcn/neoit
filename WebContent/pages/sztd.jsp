@@ -24,6 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link href="/neoit/pages/css/flexslider.css" rel="stylesheet" />
 <link href="/neoit/pages/css/style.css" rel="stylesheet" />
 <link rel="stylesheet" href="/neoit/pages/css/chat.css"/>
+<link href="/neoit/pages//img/favicon.ico" rel="shortcut icon" type="image/x-icon"/> 
+
 <!-- Theme skin -->
 <link href="/neoit/pages/skins/default.css" rel="stylesheet" />
 <script type="text/javascript" src="/neoit/pages/js/jquery.min.js"></script>
@@ -213,13 +215,13 @@ function searchForm(page){
 						<h4 align="center" class="widgetheading">服务专区</h4>
 						<div align="center">
 							<ul class="link-list">
-								<li><a href="https://tb.53kf.com/code/client/10162270/1" target="_blank">我要报名</a></li>
+								<li><a href="https://tb.53kf.com/code/client/10165030/1" target="_blank">我要报名</a></li>
 								<br/>
-								<li><a href="https://tb.53kf.com/code/client/10162270/1" target="_blank">付款方式</a></li>
+								<li><a href="https://tb.53kf.com/code/client/10165030/1" target="_blank">付款方式</a></li>
 								<br/>
-								<li><a href="https://tb.53kf.com/code/client/10162270/1" target="_blank">乘车路线</a></li>
+								<li><a href="https://tb.53kf.com/code/client/10165030/1" target="_blank">乘车路线</a></li>
 								<br/>
-								<li><a href="https://tb.53kf.com/code/client/10162270/1" target="_blank">常见问题</a></li>
+								<li><a href="https://tb.53kf.com/code/client/10165030/1" target="_blank">常见问题</a></li>
 							</ul>
 						</div>
 					</div>
@@ -289,7 +291,7 @@ function searchForm(page){
 	<i class="fa fa-angle-up active"></i>
 </a>
 
-<script>(function () {var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/10162270/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);})();</script>
+<script>(function () {var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/10165030/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);})();</script>
 
 
 <!-- javascript -->

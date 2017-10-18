@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +14,15 @@
 <meta name="description" content="" />
 <!-- css -->
 <link href="pages/fybcss/index.css" rel="stylesheet" type="text/css">
+
 <link href="pages/css/bootstrap.min.css" rel="stylesheet" />
 <link href="pages/css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <!--<link href="pages/css/jcarousel.css" rel="stylesheet" />-->
 <link href="pages/css/flexslider.css" rel="stylesheet" />
 <link href="pages/css/style.css" rel="stylesheet" />
 <link rel="stylesheet" href="pages/css/chat.css" />
+<link href="<%=basePath %>/common/images/default/favicon.ico" rel="shortcut icon" type="image/x-icon"/> 
+
 <!-- Theme skin -->
 <link href="pages/skins/default.css" rel="stylesheet" />
 
@@ -688,16 +694,16 @@
 							<h4 align="center" class="widgetheading">服务专区</h4>
 							<div align="center">
 								<ul class="link-list">
-									<li><a href="https://tb.53kf.com/code/client/10162270/1"
+									<li><a href="https://tb.53kf.com/code/client/10165030/1"
 										target="_blank">我要报名</a></li>
 									<br />
-									<li><a href="https://tb.53kf.com/code/client/10162270/1"
+									<li><a href="https://tb.53kf.com/code/client/10165030/1"
 										target="_blank">付款方式</a></li>
 									<br />
-									<li><a href="https://tb.53kf.com/code/client/10162270/1"
+									<li><a href="https://tb.53kf.com/code/client/10165030/1"
 										target="_blank">乘车路线</a></li>
 									<br />
-									<li><a href="https://tb.53kf.com/code/client/10162270/1"
+									<li><a href="https://tb.53kf.com/code/client/10165030/1"
 										target="_blank">常见问题</a></li>
 								</ul>
 							</div>
@@ -763,7 +769,7 @@
 	<script>
 		(function() {
 			var _53code = document.createElement("script");
-			_53code.src = '//tb.53kf.com/code/code/10162270/1';
+			_53code.src = '//tb.53kf.com/code/code/10165030/1';
 			var s = document.getElementsByTagName("script")[0];
 			s.parentNode.insertBefore(_53code, s);
 		})();

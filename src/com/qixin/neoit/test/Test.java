@@ -44,9 +44,9 @@ public class Test {
 		createrList.add(user);
 		System.out.println("createrList:"+createrList.get(0).getRealName());*/
 	
-	
+		//c81e728d9d4c2f636f067f89cc14862c
 	    //String	message="123211";//MD5:65F3772CD5D16F190CE4991408114607
-	    String	message="zhuyuanjie11";///MD5:5EA4021F17007A563956FFC563A475E1
+	    String	message="123456";///MD5:5EA4021F17007A563956FFC563A475E1
 	    String	md5="";
 		MessageDigest md = MessageDigest.getInstance("MD5");  // 创建一个md5算法对象  
 		byte[] messageByte = message.getBytes("UTF-8");  
