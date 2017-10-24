@@ -235,14 +235,14 @@ public class AdminController {
 					+" var da= myDate.getDate();"
 				
 				+"if(da<8){"
-				+"alert(\"da<8::\");"
+			
 					+"document.getElementById(\"vardate1\").innerHTML=mon+\"月8号\";"
 					+"document.getElementById(\"vardate2\").innerHTML=mon+\"月18号\";"
 					+"document.getElementById(\"vardate3\").innerHTML=mon+\"月28号\";"
 						
 					+"}"
 				+"if(da>=8&&da<18){"
-				+"alert(\"8<da<18::\");"
+				
 					+"document.getElementById(\"vardate1\").innerHTML=mon2+\"月8号\";"
 					+"document.getElementById(\"vardate2\").innerHTML=mon+\"月18号\";"
 					+"document.getElementById(\"vardate3\").innerHTML=mon+\"月28号\";"
@@ -250,7 +250,7 @@ public class AdminController {
 					+"} "
 				 
 				+"if(da>=18&&da<=28){"
-				+"alert(\"18<da<28::\");"
+				
 					+"document.getElementById(\"vardate1\").innerHTML=mon2+\"月8号\";"
 					+"document.getElementById(\"vardate2\").innerHTML=mon2+\"月18号\";"
 					+"document.getElementById(\"vardate3\").innerHTML=mon+\"月28号\";"

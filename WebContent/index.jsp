@@ -750,7 +750,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div class="col-lg-12">
 							<div class="copyright">
 								<p style="text-align: center; font-size: 1.5rem">
-									<span>Copyright © 2017 <a href="index.html">neoit.cn</a>
+									<span>Copyright © 2017 neoit.cn
 										All Rights Reserved
 									</span>
 								</p>
