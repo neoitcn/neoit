@@ -256,17 +256,4 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   
-  <select id="getPagingList" parameterType="com.qixin.neoit.entity.Page" resultMap="BaseResultMap">
-  	select 
-    <include refid="Base_Column_List" />
-    from sys_user
-    limit #{start},#{rows}
-  </select>
-  
-   <select id="getPagingTotalRecord" parameterType="com.qixin.neoit.entity.Page" resultType="long">
-  	select 
-    count(*)
-    from sys_user
-  </select>
-  
 </mapper>

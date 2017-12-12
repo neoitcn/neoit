@@ -3,20 +3,19 @@ package com.qixin.neoit.mapper;
 import java.util.List;
 import java.util.Map;
 
-import com.qixin.neoit.entity.Page;
 import com.qixin.neoit.entity.Sys_user;
 
 public interface Sys_userMapper {
    
-	 //1.¸ù¾ÝÓÃ»§ÃûºÍÃÜÂë²éÑ¯ÓÃ»§
+	 //1.ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½Ã»ï¿½
     Sys_user selectUserByNameAndPwd(Map map);
-    //2.¸ù¾ÝÓÃ»§Ãû²éÑ¯ÓÃ»§ÊÇ·ñ´æÔÚ
+    //2.ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½Ã»ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
     Sys_user selectByName(String name);
-    //3..²éÑ¯ÓÃ»§×ÜÒ³Êý
+    //3..ï¿½ï¿½Ñ¯ï¿½Ã»ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
   	int  selectUserPages()throws Exception;
-     //4..¸ù¾ÝÒ³Êý²éÑ¯ÓÃ»§
+     //4..ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½Ã»ï¿½
   	List<Sys_user> selectUserBypage(Integer page)throws Exception;
-    //5.¸ù¾Ýid²éÑ¯ÓÃ»§Ãû
+    //5.ï¿½ï¿½ï¿½ï¿½idï¿½ï¿½Ñ¯ï¿½Ã»ï¿½ï¿½ï¿½
     Sys_user selectUserNameById(Integer id);
    
     int deleteByPrimaryKey(Integer id);
@@ -34,7 +33,5 @@ public interface Sys_userMapper {
     
     
     
-    List<Sys_user> getPagingList(Page page);
-    Long getPagingTotalRecord(Page page);
-	
+   
 }
