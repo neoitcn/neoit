@@ -1638,14 +1638,14 @@ $.fn.layout = function (opts) {
 					.addClass( rClass+_open +" "+ rClass+_pane+_open )
 					.addClass( !s.isSliding ? "" : rClass+_sliding +" "+ rClass+_pane+_sliding )
 				;
-				if (o.resizable)
+				if (o.resizable){	//此处修改了 加了 {};
 					$R
 						.draggable("enable")
 						.css("cursor", o.resizerCursor)
 						.attr("title", o.resizerTip)
 					;
-				else
-					$R.css("cursor", "default"); // n-resize, s-resize, etc
+				}else{  //此处修改了 加了 {};
+					$R.css("cursor", "default");} // n-resize, s-resize, etc
 				// if pane also has a toggler button, adjust that too
 				if ($T) {
 					$T

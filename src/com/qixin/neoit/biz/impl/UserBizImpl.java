@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.qixin.neoit.biz.UserBiz;
 import com.qixin.neoit.entity.Sys_user;

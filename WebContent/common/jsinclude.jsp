@@ -18,7 +18,7 @@
 	List groupList = Arrays.asList(groupArray);
 	//if(groupList.contains("sigma")) {
 %>
-	<%-- <link rel="stylesheet" type="text/css" media="all" href="<%= request.getContextPath() %>/jslib/sigmagrid/grid/calendar/calendar-blue.css"  />
+	<link rel="stylesheet" type="text/css" media="all" href="<%= request.getContextPath() %>/jslib/sigmagrid/grid/calendar/calendar-blue.css"  />
 	<script src="<%= request.getContextPath() %>/jslib/sigmagrid/grid/calendar/calendar.js"></script>
 	<script src="<%= request.getContextPath() %>/jslib/sigmagrid/grid/calendar/calendar-cn-utf8.js"></script>
 	<script src="<%= request.getContextPath() %>/jslib/sigmagrid/grid/calendar/calendar-setup.js"></script>
@@ -29,7 +29,7 @@
 	
 	<script src="<%= request.getContextPath() %>/jslib/jccp/jccp_sigma_extends.js"></script>
 	<script src="<%= request.getContextPath() %>/jslib/jccp/jccp_sigma_export.js"></script>
-	<script src="${ctx}/jslib/jccp/jccp_sigma_column_definer.js"></script> --%>
+	<script src="${ctx}/jslib/jccp/jccp_sigma_column_definer.js"></script> 
 <%	
 	//}
 	if(groupList.contains("jqGrid")) {

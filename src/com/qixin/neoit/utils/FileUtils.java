@@ -1,6 +1,9 @@
 package com.qixin.neoit.utils;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.math.RoundingMode;
@@ -113,5 +116,42 @@ public class FileUtils {
 	public static byte[] readFileToByteArray(File file) throws Exception{
 		return org.apache.commons.io.FileUtils.readFileToByteArray(file);
 	}
-	
+	/**
+	 * 读取文件 并保存到指定目录 
+	 * @author:zyj
+	 * @date: 2017年12月8日
+	 */
+	public static void byteToFile(byte[] buf, String filePath, String fileName) {
+		BufferedOutputStream bufferOut = null;
+		FileOutputStream fileOut = null;
+		File file = null;
+		try {
+			File resFile = new File(filePath);
+			if (!resFile.exists() && resFile.isDirectory()) {
+				resFile.mkdirs();
+			}
+			file = new File(filePath + File.separator + fileName);
+			fileOut = new FileOutputStream(file);
+			bufferOut = new BufferedOutputStream(fileOut);
+			bufferOut.write(buf);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (bufferOut != null) {
+				try {
+					bufferOut.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (fileOut != null) {
+				try {
+					fileOut.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
 }
